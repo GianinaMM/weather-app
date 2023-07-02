@@ -38,24 +38,32 @@ const Main = ({ value }) => {
       <div className={`${classes.container}`}>
         <div className={`${classes.pContainer}`}>
           <div className={`${classes.text}`}>
-            <p style={{ fontWeight: "bold", fontSize: "larger" }}>
+            <p
+              style={{
+                fontWeight: "bold",
+                fontSize: "larger",
+                marginLeft: "5px",
+              }}
+            >
               {data.location && data.location.name}
             </p>
-            <p>
+            <p style={{ marginLeft: "5px" }}>
               Today temperature is
-              <span style={{ fontWeight: "bold", padding: "4px" }}>
+              <span style={{ fontWeight: "bold", padding: "3px" }}>
                 {data.current && data.current.temp_c}
+                °C{" "}
               </span>
               and feels like
-              <span style={{ fontWeight: "bold", padding: "4px" }}>
+              <span style={{ fontWeight: "bold", padding: "3px" }}>
                 {data.current && data.current.feelslike_c}
+                °C{" "}
               </span>
             </p>
           </div>
           <div className={`${classes.text}`}>
             <p>
               The wind speed is:
-              <span style={{ fontWeight: "bold", padding: "4px" }}>
+              <span style={{ fontWeight: "bold", padding: "3px" }}>
                 {data.current && data.current.gust_kph}
               </span>
               km/h
@@ -66,13 +74,13 @@ const Main = ({ value }) => {
                 {data.current && data.current.pressure_in}
               </span>
               and humidity:
-              <span style={{ fontWeight: "bold", padding: "4px" }}>
+              <span style={{ fontWeight: "bold", padding: "3px" }}>
                 {data.current && data.current.humidity}
               </span>
             </p>
             <p>
               Chance of rain:
-              <span style={{ fontWeight: "bold", padding: "4px" }}>
+              <span style={{ fontWeight: "bold", padding: "3px" }}>
                 {data.forecast &&
                   data.forecast.forecastday[0].day.daily_chance_of_rain}
               </span>
@@ -87,7 +95,7 @@ const Main = ({ value }) => {
                 <div className={`${classes.box}`} key={index}>
                   {day.date}
                   <img src={day.day.condition.icon}></img>
-                  <div>{day.day.maxtemp_c}</div>
+                  <div>{day.day.maxtemp_c}°C</div>
                 </div>
               );
             })}
