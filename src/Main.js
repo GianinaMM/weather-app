@@ -9,7 +9,6 @@ const Main = ({ value }) => {
     fetchWeather();
   }, [value]);
 
-  console.log(value);
 
   async function fetchWeather() {
     const response = await axios.get(
@@ -27,7 +26,6 @@ const Main = ({ value }) => {
       return (prevState = response.data);
     });
   }
-  console.log(data);
   const style = {
     fontWeight: "bold",
   };
