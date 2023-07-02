@@ -1,6 +1,7 @@
 # Weather App
 
-![weather-app](https://github.com/GianinaMM/weather-app/assets/50904838/aacb6fd0-667f-410c-b6e8-87e97ea7d0e6)
+![weather-app](https://github.com/GianinaMM/weather-app/assets/50904838/eaae7375-2619-4ccb-8e72-64bee535c563)
+
 
 ###### If you need to check your weather location, use my new __Weather App__ !! 
 
